@@ -21,7 +21,7 @@ import java.util.Set;
  * @date 2022/4/5 15:34
  * @describe 利用全窗口函数计算当前窗口中的UV数
  */
-public class WinodwProcessTest {
+public class WindowProcessTest {
 
     public static void main(String[] args) throws Exception {
 
