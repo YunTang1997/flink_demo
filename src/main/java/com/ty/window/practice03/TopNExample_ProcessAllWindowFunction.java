@@ -13,7 +13,6 @@ import org.apache.flink.streaming.api.functions.windowing.ProcessAllWindowFuncti
 import org.apache.flink.streaming.api.windowing.assigners.SlidingEventTimeWindows;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
-import org.apache.flink.util.CollectionUtil;
 import org.apache.flink.util.Collector;
 
 import java.time.Duration;
@@ -73,7 +72,7 @@ public class TopNExample_ProcessAllWindowFunction {
             }
 
             // 按照url点击量倒叙排序
-            Collections.sort(res, (o1, o2) -> (int) (o2.f1 - o1.f1));
+            res.sort((o1, o2) -> (int) (o2.f1 - o1.f1));
             return res;
         }
 
